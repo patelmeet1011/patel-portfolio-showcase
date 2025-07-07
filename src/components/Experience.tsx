@@ -38,13 +38,13 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Professional <span className="text-orange-500">Experience</span>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Professional <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             My journey in the IT and data analytics field, showcasing growth and 
             increasing responsibilities across different organizations.
           </p>
@@ -53,35 +53,35 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className="p-8 relative">
+              <Card key={index} className="p-8 relative hover-lift glass-effect animate-slide-up" style={{animationDelay: `${index * 0.3}s`}}>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8">
                   <div className="lg:w-1/3 mb-4 lg:mb-0">
-                    <div className="text-orange-500 font-semibold text-sm mb-1">
+                    <div className="text-primary font-semibold text-sm mb-1">
                       {exp.period}
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-1">
+                    <h3 className="text-xl font-semibold text-card-foreground mb-1">
                       {exp.position}
                     </h3>
-                    <div className="text-gray-600 font-medium mb-1">
+                    <div className="text-muted-foreground font-medium mb-1">
                       {exp.company}
                     </div>
-                    <div className="text-gray-500 text-sm">
+                    <div className="text-muted-foreground text-sm">
                       {exp.location}
                     </div>
                   </div>
                   
                   <div className="lg:w-2/3">
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
                       {exp.description}
                     </p>
                     
                     <div className="space-y-2">
-                      <h4 className="font-semibold text-gray-800 text-sm">Key Achievements:</h4>
+                      <h4 className="font-semibold text-card-foreground text-sm">Key Achievements:</h4>
                       <ul className="space-y-1">
                         {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-gray-600 text-sm">{achievement}</span>
+                          <li key={achIndex} className="flex items-start space-x-2 animate-fade-in" style={{animationDelay: `${(index * 0.3) + (achIndex * 0.1)}s`}}>
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0 animate-pulse"></div>
+                            <span className="text-muted-foreground text-sm">{achievement}</span>
                           </li>
                         ))}
                       </ul>

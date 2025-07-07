@@ -31,17 +31,17 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
-        <div className="space-y-6">
+        <div className="space-y-6 animate-slide-up">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
             <span className="text-sm text-gray-600">Available for hire</span>
           </div>
           
           <div className="space-y-4">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Hi! I Am
               <br />
-              <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
+              <span className="gradient-text animate-shimmer bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] bg-clip-text text-transparent">
                 Meet Patel
               </span>
             </h1>
@@ -53,10 +53,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-glow">
               Hire Me
             </Button>
-            <Button variant="outline" className="px-8 py-3 rounded-full border-2 hover:bg-orange-50 transition-all duration-300">
+            <Button variant="outline" className="px-8 py-3 rounded-full border-2 hover:bg-primary/10 transition-all duration-300 hover-scale">
               View Portfolio
             </Button>
           </div>
@@ -78,54 +78,64 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Content - Professional Placeholder */}
-        <div className="relative">
+        {/* Right Content - Professional Photo */}
+        <div className="relative animate-fade-in">
           <div className="relative z-10">
             {/* Main Profile Card */}
-            <div className="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-orange-100 to-purple-100 rounded-3xl shadow-2xl flex items-center justify-center relative overflow-hidden">
+            <div className="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl shadow-2xl flex items-center justify-center relative overflow-hidden hover-lift glass-effect animate-glow">
               {/* Decorative circles inside card */}
-              <div className="absolute top-4 right-4 w-8 h-8 bg-white/30 rounded-full"></div>
-              <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full"></div>
+              <div className="absolute top-4 right-4 w-8 h-8 bg-white/30 rounded-full animate-float"></div>
+              <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
               
               <div className="text-center z-10">
-                <div className="w-24 h-24 bg-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                  <span className="text-white text-2xl font-bold">MP</span>
+                <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden shadow-2xl ring-4 ring-primary/20 hover-scale">
+                  <img 
+                    src="/lovable-uploads/eb8c85a5-cc25-44c1-802d-330e20a9070b.png" 
+                    alt="Meet Patel - Data Analyst" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <p className="text-gray-600 font-medium">Your Professional Photo</p>
-                <p className="text-gray-500 text-sm mt-1">IT & Data Analytics Expert</p>
+                <p className="text-foreground font-medium">Meet Patel</p>
+                <p className="text-muted-foreground text-sm mt-1">Data Analytics Expert</p>
               </div>
             </div>
           </div>
           
           {/* Floating Awards Badge */}
-          <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 hover:shadow-3xl transition-shadow duration-300">
+          <div className="absolute -top-6 -right-6 bg-card rounded-2xl p-4 shadow-2xl border border-border hover-lift glass-effect animate-scale-in">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-primary rounded-xl flex items-center justify-center animate-glow">
                 <Award className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="text-sm font-bold text-gray-800">Best Design</div>
-                <div className="text-xs text-gray-500">Awards Winner</div>
+                <div className="text-sm font-bold text-card-foreground">Best Portfolio</div>
+                <div className="text-xs text-muted-foreground">Award Winner</div>
               </div>
             </div>
           </div>
 
           {/* Floating Tech Badge */}
-          <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 hover:shadow-3xl transition-shadow duration-300">
+          <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-4 shadow-2xl border border-border hover-lift glass-effect animate-scale-in" style={{animationDelay: '0.3s'}}>
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center animate-glow" style={{animationDelay: '1s'}}>
                 <Code2 className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="text-sm font-bold text-gray-800">Data Analytics</div>
-                <div className="text-xs text-gray-500">Professional Expert</div>
+                <div className="text-sm font-bold text-card-foreground">Data Analytics</div>
+                <div className="text-xs text-muted-foreground">Professional Expert</div>
               </div>
             </div>
           </div>
 
-          {/* Additional floating element */}
+          {/* Additional floating elements */}
           <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
-            <div className="w-3 h-3 bg-orange-400 rounded-full animate-ping"></div>
+            <div className="w-3 h-3 bg-primary rounded-full animate-ping"></div>
+          </div>
+          <div className="absolute top-1/4 -left-2 transform">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+          </div>
+          <div className="absolute bottom-1/4 -right-2 transform">
+            <div className="w-2 h-2 bg-primary rounded-full animate-bounce"></div>
           </div>
         </div>
       </div>

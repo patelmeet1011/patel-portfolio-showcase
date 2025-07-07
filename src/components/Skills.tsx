@@ -37,13 +37,13 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            My Awesome <span className="text-orange-500">Skills</span>
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            My Awesome <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             I have extensive experience across multiple domains of IT and data analytics, 
             with expertise in modern tools and technologies that drive business success.
           </p>
@@ -51,20 +51,20 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4`}>
+            <Card key={index} className="p-6 hover-lift glass-effect animate-scale-in" style={{animationDelay: `${index * 0.1}s`}}>
+              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4 animate-glow`}>
                 <span className="text-white font-bold text-lg">
                   {category.title.charAt(0)}
                 </span>
               </div>
               
-              <h3 className="font-semibold text-gray-800 mb-3">{category.title}</h3>
+              <h3 className="font-semibold text-card-foreground mb-3">{category.title}</h3>
               
               <div className="space-y-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span className="text-gray-600 text-sm">{skill}</span>
+                  <div key={skillIndex} className="flex items-center space-x-2 animate-fade-in" style={{animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s`}}>
+                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                    <span className="text-muted-foreground text-sm">{skill}</span>
                   </div>
                 ))}
               </div>
