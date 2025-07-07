@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Linkedin, Download } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,15 +36,46 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center space-x-4">
-            <Button 
-              variant="outline" 
-              className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
+          <div className="hidden md:flex items-center space-x-3">
+            <Button
+              asChild
+              size="sm"
+              variant="ghost"
+              className="hover:bg-blue-50 hover:text-blue-600"
             >
-              Download CV
+              <a
+                href="https://www.linkedin.com/in/meet-patel-7581b31b9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </Button>
-            <Button className="bg-orange-500 hover:bg-orange-600">
-              Contact Me
+            <Button 
+              asChild
+              variant="outline" 
+              size="sm"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <a
+                href="/meetpatelResume.pdf"
+                download="Meet_Patel_Resume.pdf"
+                className="flex items-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                Resume
+              </a>
+            </Button>
+            <Button 
+              asChild
+              size="sm"
+              className="bg-primary hover:bg-primary/90"
+            >
+              <a href="#contact" className="flex items-center gap-2">
+                Contact Me
+              </a>
             </Button>
           </div>
 
@@ -71,11 +102,42 @@ const Header = () => {
               </a>
             ))}
             <div className="flex flex-col space-y-2 mt-4">
-              <Button variant="outline" className="border-orange-500 text-orange-500">
-                Download CV
+              <Button
+                asChild
+                variant="ghost"
+                className="justify-start hover:bg-blue-50 hover:text-blue-600"
+              >
+                <a
+                  href="https://www.linkedin.com/in/meet-patel-7581b31b9/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn Profile
+                </a>
               </Button>
-              <Button className="bg-orange-500 hover:bg-orange-600">
-                Contact Me
+              <Button 
+                asChild
+                variant="outline" 
+                className="justify-start border-primary text-primary"
+              >
+                <a
+                  href="/meetpatelResume.pdf"
+                  download="Meet_Patel_Resume.pdf"
+                  className="flex items-center gap-2"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
+              </Button>
+              <Button 
+                asChild
+                className="justify-start bg-primary hover:bg-primary/90"
+              >
+                <a href="#contact" className="flex items-center gap-2">
+                  Contact Me
+                </a>
               </Button>
             </div>
           </nav>
