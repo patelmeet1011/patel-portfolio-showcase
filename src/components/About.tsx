@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { MapPin, Calendar, Award, Code2, Database, Cloud, BarChart3, Download } from 'lucide-react';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+  return <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -53,15 +50,7 @@ const About = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Calendar className="w-5 h-5 text-blue-600" />
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800">Experience</p>
-                  <p className="text-gray-600">2+ Years</p>
-                </div>
-              </div>
+              
             </div>
 
             {/* CTA Buttons */}
@@ -134,8 +123,8 @@ const About = () => {
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Code2 className="w-8 h-8 text-white" />
             </div>
-            <div className="text-3xl font-bold text-gray-800 mb-2">50+</div>
-            <div className="text-gray-600">Happy Clients</div>
+            <div className="text-3xl font-bold text-gray-800 mb-2">6+</div>
+            <div className="text-gray-600">Tech Experience </div>
           </div>
           
           <div className="text-center">
@@ -151,12 +140,10 @@ const About = () => {
               <BarChart3 className="w-8 h-8 text-white" />
             </div>
             <div className="text-3xl font-bold text-gray-800 mb-2">2+</div>
-            <div className="text-gray-600">Years Experience</div>
+            <div className="text-gray-600">Work  Experience</div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;

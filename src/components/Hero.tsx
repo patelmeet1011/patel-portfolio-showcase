@@ -1,15 +1,11 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { Moon, Sun, Award, Code2 } from 'lucide-react';
-
 const Hero = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
-  return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-blue-50 to-purple-50"></div>
       
@@ -21,11 +17,7 @@ const Hero = () => {
       {/* Theme Toggle */}
       <div className="absolute top-8 right-8 flex items-center space-x-2 bg-white/20 backdrop-blur-md rounded-full p-3">
         <Sun className="h-4 w-4 text-yellow-500" />
-        <Switch 
-          checked={isDarkMode} 
-          onCheckedChange={setIsDarkMode}
-          className="data-[state=checked]:bg-slate-800"
-        />
+        <Switch checked={isDarkMode} onCheckedChange={setIsDarkMode} className="data-[state=checked]:bg-slate-800" />
         <Moon className="h-4 w-4 text-slate-600" />
       </div>
       
@@ -85,15 +77,13 @@ const Hero = () => {
             <div className="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl shadow-2xl flex items-center justify-center relative overflow-hidden hover-lift glass-effect animate-glow">
               {/* Decorative circles inside card */}
               <div className="absolute top-4 right-4 w-8 h-8 bg-white/30 rounded-full animate-float"></div>
-              <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+              <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full animate-float" style={{
+              animationDelay: '1s'
+            }}></div>
               
               <div className="text-center z-10">
                 <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden shadow-2xl ring-4 ring-primary/20 hover-scale">
-                  <img 
-                    src="/lovable-uploads/eb8c85a5-cc25-44c1-802d-330e20a9070b.png" 
-                    alt="Meet Patel - Data Analyst" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="/lovable-uploads/eb8c85a5-cc25-44c1-802d-330e20a9070b.png" alt="Meet Patel - Data Analyst" className="w-full h-full object-cover" />
                 </div>
                 <p className="text-foreground font-medium">Meet Patel</p>
                 <p className="text-muted-foreground text-sm mt-1">Data Analytics Expert</p>
@@ -103,29 +93,11 @@ const Hero = () => {
           
           {/* Floating Awards Badge */}
           <div className="absolute -top-6 -right-6 bg-card rounded-2xl p-4 shadow-2xl border border-border hover-lift glass-effect animate-scale-in">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-primary rounded-xl flex items-center justify-center animate-glow">
-                <Award className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="text-sm font-bold text-card-foreground">Best Portfolio</div>
-                <div className="text-xs text-muted-foreground">Award Winner</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Floating Tech Badge */}
-          <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-4 shadow-2xl border border-border hover-lift glass-effect animate-scale-in" style={{animationDelay: '0.3s'}}>
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center animate-glow" style={{animationDelay: '1s'}}>
-                <Code2 className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="text-sm font-bold text-card-foreground">Data Analytics</div>
-                <div className="text-xs text-muted-foreground">Professional Expert</div>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Additional floating elements */}
           <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
@@ -139,8 +111,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

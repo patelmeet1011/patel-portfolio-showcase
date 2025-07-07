@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,26 +11,29 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      description: "Thank you for your message. I'll get back to you soon."
     });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
-
-  return (
-    <section id="contact" className="py-20 bg-white">
+  return <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -58,26 +59,17 @@ const Contact = () => {
             <div className="space-y-6">
               <Card className="p-6">
                 <h4 className="font-semibold text-gray-800 mb-2">Email</h4>
-                <p className="text-gray-600">meet.patel@email.com</p>
+                <p className="text-gray-600">patelmeet1348@gmail.com </p>
               </Card>
               
-              <Card className="p-6">
-                <h4 className="font-semibold text-gray-800 mb-2">Phone</h4>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-              </Card>
               
-              <Card className="p-6">
-                <h4 className="font-semibold text-gray-800 mb-2">Location</h4>
-                <p className="text-gray-600">New York, NY, USA</p>
-              </Card>
+              
+              
             </div>
 
             <div className="bg-orange-50 p-6 rounded-2xl">
               <h4 className="font-semibold text-gray-800 mb-2">Quick Response Time</h4>
-              <p className="text-gray-600 text-sm">
-                I typically respond to messages within 24 hours. For urgent inquiries, 
-                feel free to call me directly.
-              </p>
+              <p className="text-gray-600 text-sm">I typically respond to messages within 24 hours. For urgent inquiries, feel free to email me directly.</p>
             </div>
           </div>
 
@@ -89,26 +81,13 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Your Name
                   </label>
-                  <Input
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="John Doe"
-                    required
-                  />
+                  <Input name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
-                  <Input
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com"
-                    required
-                  />
+                  <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@example.com" required />
                 </div>
               </div>
               
@@ -116,41 +95,23 @@ const Contact = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
                 </label>
-                <Input
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Project Discussion"
-                  required
-                />
+                <Input name="subject" value={formData.subject} onChange={handleChange} placeholder="Project Discussion" required />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
-                <Textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={6}
-                  placeholder="Tell me about your project..."
-                  required
-                />
+                <Textarea name="message" value={formData.message} onChange={handleChange} rows={6} placeholder="Tell me about your project..." required />
               </div>
               
-              <Button 
-                type="submit" 
-                className="w-full bg-orange-500 hover:bg-orange-600 py-3"
-              >
+              <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 py-3">
                 Send Message
               </Button>
             </form>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
