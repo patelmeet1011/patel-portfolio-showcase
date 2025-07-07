@@ -41,13 +41,15 @@ const About = () => {
             {/* Quick Info */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-orange-600" />
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center shadow-lg">
+                  <Award className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">Education</p>
-                  <p className="text-gray-600">BS Information Technology</p>
-                  <p className="text-xs text-gray-500">UMass Boston, GPA: 3.594/4.0</p>
+                  <p className="text-gray-600 font-medium">BS Information Technology</p>
+                  <p className="text-sm text-gray-600">UMass Boston • 2020-2024</p>
+                  <p className="text-xs text-purple-600 font-semibold">GPA: 3.594/4.0 • Magna Cum Laude</p>
+                  <p className="text-xs text-blue-600">Dean's List Recipient</p>
                 </div>
               </div>
               
