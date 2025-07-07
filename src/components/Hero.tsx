@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-blue-50 to-purple-50"></div>
       
@@ -31,10 +28,7 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-md">
-              Product designer and digital creative director working in design 
-              field for 7 years so far, specialized user interface design.
-            </p>
+            <p className="text-xl text-gray-600 max-w-md">An IT Professional based in Boston, MA, and I'm passionate about leveraging data, cloud, and analytics to solve complex problems.</p>
           </div>
 
           <div className="flex flex-wrap gap-3">
@@ -49,16 +43,18 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex items-center space-x-8 pt-8">
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-800">7+</div>
+              <div className="text-2xl font-bold text-gray-800">2+</div>
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-800">50+</div>
+              <div className="text-2xl font-bold text-gray-800">10+</div>
               <div className="text-sm text-gray-600">Projects Done</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-800">25+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
+              <div className="text-2xl font-bold text-gray-800">
+            </div>
+              <div className="text-sm text-gray-600">
+            </div>
             </div>
           </div>
         </div>
@@ -66,11 +62,7 @@ const Hero = () => {
         {/* Right Content - Image */}
         <div className="relative">
           <div className="relative z-10">
-            <img 
-              src="/lovable-uploads/3ba80543-d670-4d85-829e-0db6a15a6b85.png"
-              alt="Meet Patel"
-              className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
-            />
+            <img src="/lovable-uploads/3ba80543-d670-4d85-829e-0db6a15a6b85.png" alt="Meet Patel" className="w-full max-w-md mx-auto rounded-3xl shadow-2xl" />
           </div>
           
           {/* Floating Awards Badge */}
@@ -100,8 +92,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
