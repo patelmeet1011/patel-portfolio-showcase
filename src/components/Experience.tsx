@@ -5,36 +5,34 @@ import { Card } from '@/components/ui/card';
 const Experience = () => {
   const experiences = [
     {
-      company: "TechCorp Analytics",
-      position: "Senior Data Analyst",
-      period: "2022 - Present",
-      description: "Leading data analytics initiatives for enterprise clients, developing automated reporting solutions and machine learning models that improved decision-making processes by 40%.",
-      achievements: [
-        "Reduced data processing time by 50% through pipeline optimization",
-        "Led team of 5 analysts on major client projects",
-        "Implemented real-time dashboard solutions"
-      ]
-    },
-    {
-      company: "DataViz Solutions",
+      company: "Mobiquity Inc.",
+      location: "Waltham, MA",
       position: "Data Analyst",
-      period: "2020 - 2022",
-      description: "Developed comprehensive business intelligence solutions and interactive dashboards for mid-market companies, focusing on sales analytics and customer insights.",
+      period: "Jan 2024 - Present",
+      description: "Drive key business outcomes by translating complex client requirements into actionable data insights. Work directly contributes to improving digital products, enhancing marketing effectiveness, and ensuring data governance.",
       achievements: [
-        "Created 20+ interactive Tableau dashboards",
-        "Improved client retention through predictive analytics",
-        "Streamlined reporting processes saving 15 hours/week"
+        "Collaborated with clients using SQL, BigQuery, and Redshift to deliver data-driven insights",
+        "Analyzed user engagement data, improving digital product performance and increasing customer retention by 15%",
+        "Optimized marketing campaigns using Google Analytics and SQL, boosting engagement rates by 25% and ROI by 20%",
+        "Created interactive Tableau and Power BI dashboards for real-time KPI monitoring",
+        "Applied A/B testing, customer segmentation, and predictive modeling achieving 20% improvement in campaign effectiveness",
+        "Built scalable data workflows with Apache Airflow and AWS Glue while ensuring HIPAA and GDPR compliance",
+        "Designed secure cloud data solutions on AWS, Azure, and Google Cloud platforms"
       ]
     },
     {
-      company: "CloudFirst Inc",
-      position: "Junior Data Analyst",
-      period: "2019 - 2020",
-      description: "Started career focusing on data cleaning, basic analytics, and supporting senior analysts with cloud-based data solutions and reporting tasks.",
+      company: "Novus Logics",
+      location: "Ahmedabad, India",
+      position: "Data Analyst Intern",
+      period: "Jun 2022 - Aug 2022",
+      description: "Focused on optimizing data processes and providing foundational analysis to support team objectives during a transformative internship experience.",
       achievements: [
-        "Mastered SQL and Python for data analysis",
-        "Contributed to 10+ client projects",
-        "Earned AWS Cloud Practitioner certification"
+        "Spearheaded SQL optimization initiatives, reducing query processing time by 60%",
+        "Managed full data lifecycle including collection, cleaning, and preprocessing for accuracy",
+        "Conducted comprehensive Exploratory Data Analysis (EDA) to uncover key trends and patterns",
+        "Developed and maintained interactive Tableau dashboards for stakeholder insights",
+        "Automated reporting processes with complex SQL queries, improving data retrieval efficiency by 30%",
+        "Provided technical support and resolved customer issues to ensure high client satisfaction"
       ]
     }
   ];
@@ -64,8 +62,11 @@ const Experience = () => {
                     <h3 className="text-xl font-semibold text-gray-800 mb-1">
                       {exp.position}
                     </h3>
-                    <div className="text-gray-600 font-medium">
+                    <div className="text-gray-600 font-medium mb-1">
                       {exp.company}
+                    </div>
+                    <div className="text-gray-500 text-sm">
+                      {exp.location}
                     </div>
                   </div>
                   

@@ -5,24 +5,34 @@ import { Card } from '@/components/ui/card';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming & Databases",
-      skills: ["Python", "SQL", "R", "JavaScript", "MongoDB", "PostgreSQL"],
+      title: "Programming & Languages",
+      skills: ["Python", "R", "SQL", "Java", "Ruby", "HTML/CSS", "Unix/Linux"],
       color: "from-blue-500 to-purple-600"
     },
     {
-      title: "Data Visualization",
-      skills: ["Tableau", "Power BI", "D3.js", "Matplotlib", "Plotly"],
+      title: "Data Analysis & Visualization",
+      skills: ["Tableau", "Power BI", "Microsoft Excel", "Plotly", "Streamlit", "EDA", "Dashboard Design"],
       color: "from-green-500 to-blue-500"
     },
     {
-      title: "Cloud Platforms",
-      skills: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"],
+      title: "Databases & Cloud",
+      skills: ["SQL Server", "BigQuery", "Redshift", "AWS", "Azure", "Google Cloud", "SSMS"],
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Analytics & ML",
-      skills: ["Machine Learning", "Statistical Analysis", "Predictive Modeling", "A/B Testing"],
+      title: "Analytics & Tools",
+      skills: ["Predictive Modeling", "A/B Testing", "Customer Segmentation", "Apache Airflow", "AWS Glue", "Google Analytics"],
       color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Compliance & Security",
+      skills: ["HIPAA", "GDPR", "Data Security", "CompTIA CySA+", "AWS Certified"],
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Business Intelligence",
+      skills: ["ETL Development", "Data Warehousing", "Oracle NetSuite", "Dynamics 365", "VMware"],
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
@@ -39,7 +49,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <Card key={index} className="p-6 hover:shadow-lg transition-shadow duration-300">
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4`}>

@@ -47,8 +47,8 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-md">
-              An IT Professional based in Boston, MA, and I'm passionate about leveraging data, 
-              cloud, and analytics to solve complex problems.
+              A Data Analyst based in Boston, MA, passionate about leveraging data, 
+              cloud, and analytics to solve complex business challenges and drive innovation.
             </p>
           </div>
 

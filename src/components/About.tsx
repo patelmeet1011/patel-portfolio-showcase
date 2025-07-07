@@ -45,8 +45,9 @@ const About = () => {
                   <MapPin className="w-5 h-5 text-orange-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">Location</p>
-                  <p className="text-gray-600">Boston, MA</p>
+                  <p className="font-semibold text-gray-800">Education</p>
+                  <p className="text-gray-600">BS Information Technology</p>
+                  <p className="text-xs text-gray-500">UMass Boston, GPA: 3.594/4.0</p>
                 </div>
               </div>
               
