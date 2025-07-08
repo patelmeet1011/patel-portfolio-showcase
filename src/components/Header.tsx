@@ -126,7 +126,7 @@ const Header = () => {
               >
                 <a
                   href="/meetpatelResume.pdf"
-                  download="Meet_Patel_Resume.pdf"
+                  download="meetpatelResume.pdf"
                   className="flex items-center gap-2"
                 >
                   <Download className="w-4 h-4" />
