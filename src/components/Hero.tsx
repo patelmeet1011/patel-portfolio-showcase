@@ -5,14 +5,21 @@ import { Switch } from '@/components/ui/switch';
 import { Moon, Sun, Award, Code2 } from 'lucide-react';
 const Hero = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  return <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-blue-50 to-purple-50"></div>
+  return <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-muted/20 to-background">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 bg-grid opacity-20"></div>
       
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 w-20 h-20 bg-yellow-300 rounded-full opacity-60 animate-pulse"></div>
-      <div className="absolute top-40 left-20 w-12 h-12 bg-blue-400 rounded-full opacity-40 animate-bounce"></div>
-      <div className="absolute bottom-40 right-40 w-16 h-16 bg-purple-400 rounded-full opacity-50"></div>
+      {/* Floating Particles */}
+      <div className="absolute inset-0">
+        <div className="particle w-3 h-3 top-20 left-20 animate-particle-float"></div>
+        <div className="particle w-2 h-2 top-1/3 right-1/4 animate-particle-float" style={{ animationDelay: '2s' }}></div>
+        <div className="particle w-4 h-4 bottom-1/3 left-1/3 animate-particle-float" style={{ animationDelay: '4s' }}></div>
+        <div className="particle w-1.5 h-1.5 top-1/2 right-1/3 animate-particle-float" style={{ animationDelay: '6s' }}></div>
+      </div>
+      
+      {/* Morphing Background Shapes */}
+      <div className="absolute top-10 right-10 w-32 h-32 bg-primary/10 morphing-shape blur-2xl"></div>
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-accent/10 morphing-shape blur-xl" style={{ animationDelay: '3s' }}></div>
       
       {/* Theme Toggle */}
       <div className="absolute top-8 right-8 flex items-center space-x-2 bg-white/20 backdrop-blur-md rounded-full p-3">
@@ -30,10 +37,10 @@ const Hero = () => {
           </div>
           
           <div className="space-y-4">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight animate-text-reveal">
               Hi! I Am
               <br />
-              <span className="gradient-text animate-shimmer bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] bg-clip-text text-transparent">
+              <span className="gradient-text animate-shimmer bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] bg-clip-text text-transparent typing-cursor">
                 Meet Patel
               </span>
             </h1>
@@ -53,39 +60,51 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Stats */}
+          {/* Animated Stats */}
           <div className="flex items-center space-x-8 pt-8">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-800">2+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
+            <div className="text-center animate-counter-up" style={{ animationDelay: '0.5s' }}>
+              <div className="text-2xl font-bold text-foreground relative">
+                2+
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-pulse-ring"></div>
+              </div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-800">10+</div>
-              <div className="text-sm text-gray-600">Projects Done</div>
+            <div className="text-center animate-counter-up" style={{ animationDelay: '0.7s' }}>
+              <div className="text-2xl font-bold text-foreground relative">
+                10+
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full animate-pulse-ring"></div>
+              </div>
+              <div className="text-sm text-muted-foreground">Projects Done</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-gray-800">50+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
+            <div className="text-center animate-counter-up" style={{ animationDelay: '0.9s' }}>
+              <div className="text-2xl font-bold text-foreground relative">
+                50+
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-pulse-ring"></div>
+              </div>
+              <div className="text-sm text-muted-foreground">Happy Clients</div>
             </div>
           </div>
         </div>
 
-        {/* Right Content - Professional Photo */}
-        <div className="relative animate-fade-in">
+        {/* Right Content - Enhanced Professional Photo */}
+        <div className="relative animate-slide-in-right">
           <div className="relative z-10">
-            {/* Main Profile Card */}
-            <div className="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl shadow-2xl flex items-center justify-center relative overflow-hidden hover-lift glass-effect animate-glow">
-              {/* Decorative circles inside card */}
-              <div className="absolute top-4 right-4 w-8 h-8 bg-white/30 rounded-full animate-float"></div>
-              <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full animate-float" style={{
+            {/* Main Profile Card with Enhanced Animations */}
+            <div className="w-full max-w-md mx-auto h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl shadow-2xl flex items-center justify-center relative overflow-hidden hover-lift glass-effect animate-glow group">
+              {/* Enhanced Decorative Elements */}
+              <div className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full animate-float"></div>
+              <div className="absolute bottom-4 left-4 w-6 h-6 bg-gradient-to-r from-accent/30 to-primary/30 rounded-full animate-float" style={{
               animationDelay: '1s'
             }}></div>
+              <div className="absolute top-1/2 left-2 w-3 h-3 bg-primary/20 rounded-full animate-pulse"></div>
+              <div className="absolute top-1/4 right-2 w-4 h-4 bg-accent/20 rounded-full animate-bounce"></div>
               
               <div className="text-center z-10">
-                <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden shadow-2xl ring-4 ring-primary/20 hover-scale">
-                  <img src="/lovable-uploads/eb8c85a5-cc25-44c1-802d-330e20a9070b.png" alt="Meet Patel - Data Analyst" className="w-full h-full object-cover" />
+                <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden shadow-2xl ring-4 ring-primary/20 hover-scale group-hover:ring-primary/40 transition-all duration-500 relative">
+                  <img src="/lovable-uploads/eb8c85a5-cc25-44c1-802d-330e20a9070b.png" alt="Meet Patel - Data Analyst" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <p className="text-foreground font-medium">Meet Patel</p>
+                <p className="text-foreground font-medium group-hover:text-primary transition-colors">Meet Patel</p>
                 <p className="text-muted-foreground text-sm mt-1">Data Analytics Expert</p>
               </div>
             </div>

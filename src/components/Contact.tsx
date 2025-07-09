@@ -91,7 +91,7 @@ const Contact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Button
                   asChild
-                  className="bg-blue-600 hover:bg-blue-700 text-white p-6 h-auto flex-col gap-3 hover-scale group"
+                  className="bg-blue-600 hover:bg-blue-700 text-white p-6 h-auto flex-col gap-3 hover-scale group animate-glow"
                 >
                   <a
                     href="https://www.linkedin.com/in/meet-patel-7581b31b9/"
@@ -99,19 +99,19 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-3"
                   >
-                    <Linkedin className="w-6 h-6 group-hover:animate-pulse" />
-                    <span className="text-sm font-medium">LinkedIn Profile</span>
+                    <Linkedin className="w-6 h-6 group-hover:animate-bounce" />
+                    <span className="text-sm font-medium">Connect on LinkedIn</span>
                   </a>
                 </Button>
                 
                 <Button
                   asChild
                   variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground p-6 h-auto flex-col gap-3 hover-scale group"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground p-6 h-auto flex-col gap-3 hover-scale group animate-glow"
                 >
                   <a
                     href="/meetpatelResume.pdf"
-                    download="Meet_Patel_Resume.pdf"
+                    download="meetpatelResume.pdf"
                     className="flex flex-col items-center gap-3"
                   >
                     <Download className="w-6 h-6 group-hover:animate-bounce" />

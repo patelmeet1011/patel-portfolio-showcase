@@ -9,6 +9,8 @@ import Experience from '@/components/Experience';
 import Certificates from '@/components/Certificates';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Testimonials from '@/components/Testimonials';
+import Achievements from '@/components/Achievements';
 
 const Index = () => {
   return (
@@ -19,7 +21,9 @@ const Index = () => {
       <Skills />
       <Projects />
       <Experience />
+      <Achievements />
       <Certificates />
+      <Testimonials />
       <Contact />
       <Footer />
     </div>

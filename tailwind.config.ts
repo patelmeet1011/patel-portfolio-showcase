@@ -148,7 +148,17 @@ export default {
 				'scale-in': 'scale-in 0.5s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite alternate',
-				'shimmer': 'shimmer 2s linear infinite'
+				'shimmer': 'shimmer 2s linear infinite',
+				'particle-float': 'particle-float 8s ease-in-out infinite',
+				'text-reveal': 'text-reveal 0.8s ease-out',
+				'counter-up': 'counter-up 1s ease-out',
+				'pulse-ring': 'pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite',
+				'typewriter': 'typewriter 4s steps(40, end) infinite',
+				'blink': 'blink 1s infinite',
+				'slide-in-left': 'slide-in-left 0.8s ease-out',
+				'slide-in-right': 'slide-in-right 0.8s ease-out',
+				'bounce-in': 'bounce-in 1s ease-out',
+				'morph': 'morph 8s ease-in-out infinite'
 			}
 		}
 	},

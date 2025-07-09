@@ -15,8 +15,8 @@ const Projects = () => {
       technologies: ["Python", "Apache Airflow", "AWS Glue", "Tableau", "Pandas", "Scikit-learn"],
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
       metrics: "10% ROI Enhancement",
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://marketing-insights-demo.vercel.app",
+      githubUrl: "https://github.com/meetpatel/marketing-insights"
     },
     {
       id: "excel-viz-pro",
@@ -26,8 +26,8 @@ const Projects = () => {
       technologies: ["Python", "Streamlit", "Plotly", "Pandas", "NumPy"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
       metrics: "Instant Visualizations",
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://excel-viz-pro.streamlit.app",
+      githubUrl: "https://github.com/meetpatel/excel-viz-pro"
     },
     {
       id: "tableau-analysis",
@@ -37,8 +37,8 @@ const Projects = () => {
       technologies: ["Tableau", "SQL", "Data Blending", "Statistical Analysis"],
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
       metrics: "25% Efficiency Gain",
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://public.tableau.com/app/profile/meet.patel/vizzes",
+      githubUrl: "https://github.com/meetpatel/tableau-analysis"
     }
   ];
 
@@ -116,9 +116,14 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button className="bg-primary hover:bg-primary/90 px-8 py-3 hover-scale">
-            View All Projects
+        <div className="text-center mt-12 animate-fade-in">
+          <Button 
+            asChild
+            className="bg-primary hover:bg-primary/90 px-8 py-3 hover-scale animate-glow"
+          >
+            <a href="https://github.com/meetpatel" target="_blank" rel="noopener noreferrer">
+              View All Projects on GitHub
+            </a>
           </Button>
         </div>
       </div>
