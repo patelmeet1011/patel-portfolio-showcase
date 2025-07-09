@@ -11,6 +11,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import Achievements from '@/components/Achievements';
+import Education from '@/components/Education';
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <Skills />
       <Projects />
       <Experience />
+      <Education />
       <Achievements />
       <Certificates />
       <Testimonials />

@@ -19,6 +19,28 @@ const Projects = () => {
       githubUrl: "https://github.com/meetpatel/marketing-insights"
     },
     {
+      id: "us-pollution-dashboard",
+      title: "US Pollution Data Dashboard (2000–2016)",
+      period: "Oct 2022 - Nov 2022",
+      description: "Created an interactive Tableau dashboard to visualize and analyze air pollution trends across U.S. states from 2000 to 2016. Focused on environmental data exploration to uncover regional patterns and trends in pollutant levels over time.",
+      technologies: ["Tableau", "Data Cleaning", "Excel", "Geospatial Visualization", "Environmental Analytics", "Kaggle"],
+      image: "https://images.unsplash.com/photo-1569163139394-de44cb2c924e?w=400&h=250&fit=crop",
+      metrics: "16-Year Trend Analysis",
+      liveUrl: "https://public.tableau.com/app/profile/meet.patel/viz/USPollutionDashboard",
+      githubUrl: "https://github.com/meetpatel/us-pollution-dashboard"
+    },
+    {
+      id: "ubuntu-server-config",
+      title: "Ubuntu 20.04 LTS Server Installation & Remote Access",
+      period: "Jan 2022 - May 2022",
+      description: "Completed a hands-on system administration project for IT341, focused on installing and configuring Ubuntu 20.04 LTS Server on both physical lab machines and virtual workstations with secure remote access setup.",
+      technologies: ["Ubuntu Server", "Linux Administration", "SSH", "RDP", "Network Configuration", "Virtualization"],
+      image: "https://images.unsplash.com/photo-1629654291663-b91ad427698f?w=400&h=250&fit=crop",
+      metrics: "Full Lab Setup",
+      liveUrl: "#",
+      githubUrl: "https://github.com/meetpatel/ubuntu-server-config"
+    },
+    {
       id: "excel-viz-pro",
       title: "Excel Visualization Web App (Excel Viz Pro)",
       period: "Sep 2023 - Dec 2023",
@@ -55,7 +77,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card 
               key={index} 

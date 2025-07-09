@@ -6,36 +6,31 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "TechFlow Solutions",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=80&h=80&fit=crop&crop=face",
-      content: "Meet's data analytics expertise transformed our marketing campaigns. His insights helped us achieve a 25% increase in ROI within just 3 months. Exceptional work!",
-      rating: 5
+      name: "Michael A. Dotto",
+      role: "Faculty & Industry Leader",
+      company: "University of Massachusetts Boston",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+      content: "Meet Patel is an excellent student, I enthusiastically support his application. He is intelligent, works well as a team member, and has demonstrated leadership potential. Meet produced quality work in my class and was among the top two or three students in all facets of the course. He writes well, is very analytical, and articulate in his presentation. I can see Meet as a successful professional; he has the capacity to understand material in depth.",
+      rating: 5,
+      credential: "617-645-2451 Michael.Dotto@umb.edu"
     },
     {
-      name: "Michael Chen",
-      role: "Operations Manager",
-      company: "DataVision Inc",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face",
-      content: "Working with Meet was a game-changer for our business intelligence. His cloud solutions optimized our data workflows and reduced processing time by 60%.",
-      rating: 5
+      name: "Shan Jiang",
+      role: "Associate Professor",
+      company: "University of Massachusetts Boston",
+      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face",
+      content: "Meet was a student in my IT471 class and he was always dedicated to problem solving and projects where he could enhance data analytics skills. He got an A in my class.",
+      rating: 5,
+      credential: "IT471 - Data Analytics Course"
     },
     {
-      name: "Emily Rodriguez",
-      role: "CEO",
-      company: "InnovateLab",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
-      content: "Meet delivered exceptional Tableau dashboards that provided real-time insights into our operations. His attention to detail and technical skills are outstanding.",
-      rating: 5
-    },
-    {
-      name: "David Park",
-      role: "Data Science Lead",
-      company: "Analytics Pro",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face",
-      content: "Meet's Python automation solutions saved our team countless hours. His ability to translate complex requirements into elegant solutions is remarkable.",
-      rating: 5
+      name: "Santosh Pal & Hardik Patel",
+      role: "Founder CEO & Sales Executive",
+      company: "Novus Logics, Ahmedabad, India",
+      avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face",
+      content: "This is to certify that Meet R Patel has successfully completed the internship as Data Analyst in Novus Logics from June 1st, 2022 to August 31st, 2022. During the period of his internship program with us he was found punctual, hardworking and inquisitive.",
+      rating: 5,
+      credential: "3-Month Data Analyst Internship"
     }
   ];
 
@@ -52,11 +47,11 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            What Clients Say About My <span className="gradient-text">Work</span>
+            Professional <span className="gradient-text">Recommendations</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real feedback from satisfied clients who have experienced the impact of 
-            data-driven solutions and collaborative partnerships.
+            Authentic testimonials from professors, industry leaders, and internship supervisors 
+            who have witnessed my academic excellence and professional growth.
           </p>
         </div>
 
@@ -99,9 +94,17 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              <p className="text-muted-foreground leading-relaxed italic">
+              <p className="text-muted-foreground leading-relaxed italic mb-4">
                 "{testimonial.content}"
               </p>
+              
+              {testimonial.credential && (
+                <div className="pt-3 border-t border-border/50">
+                  <p className="text-xs text-primary/80 font-medium">
+                    {testimonial.credential}
+                  </p>
+                </div>
+              )}
             </Card>
           ))}
         </div>
