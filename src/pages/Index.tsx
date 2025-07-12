@@ -12,14 +12,12 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
-import Timeline from '@/components/Timeline';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <Timeline />
       <About />
       <Skills />
       <Projects />
