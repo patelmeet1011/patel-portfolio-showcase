@@ -113,6 +113,13 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Hide default cursor on desktop */
+  @media (min-width: 768px) {
+    * {
+      cursor: none !important;
+    }
+  }
+
   /* Animation utilities */
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
