@@ -16,7 +16,8 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
       metrics: "10% ROI Enhancement",
       liveUrl: "https://marketing-insights-demo.vercel.app",
-      githubUrl: "https://github.com/meetpatel/marketing-insights"
+      githubUrl: "https://github.com/meetpatel/marketing-insights",
+      showLiveDemo: false
     },
     {
       id: "us-pollution-dashboard",
@@ -27,7 +28,8 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1569163139394-de44cb2c924e?w=400&h=250&fit=crop",
       metrics: "16-Year Trend Analysis",
       liveUrl: "https://public.tableau.com/app/profile/meet.patel/viz/USPollutionDashboard",
-      githubUrl: "https://github.com/meetpatel/us-pollution-dashboard"
+      githubUrl: "https://github.com/meetpatel/us-pollution-dashboard",
+      showLiveDemo: false
     },
     {
       id: "ubuntu-server-config",
@@ -38,7 +40,8 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1629654291663-b91ad427698f?w=400&h=250&fit=crop",
       metrics: "Full Lab Setup",
       liveUrl: "#",
-      githubUrl: "https://github.com/meetpatel/ubuntu-server-config"
+      githubUrl: "https://github.com/meetpatel/ubuntu-server-config",
+      showLiveDemo: false
     },
     {
       id: "excel-viz-pro",
@@ -48,8 +51,9 @@ const Projects = () => {
       technologies: ["Python", "Streamlit", "Plotly", "Pandas", "NumPy"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
       metrics: "Instant Visualizations",
-      liveUrl: "https://excel-viz-pro.streamlit.app",
-      githubUrl: "https://github.com/meetpatel/excel-viz-pro"
+      liveUrl: "https://patelmeet1011.github.io/ExcelVizProIt485/",
+      githubUrl: "https://github.com/patelmeet1011/ExcelVizProIt485",
+      showLiveDemo: true
     },
     {
       id: "tableau-analysis",
@@ -60,7 +64,32 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
       metrics: "25% Efficiency Gain",
       liveUrl: "https://public.tableau.com/app/profile/meet.patel/vizzes",
-      githubUrl: "https://github.com/meetpatel/tableau-analysis"
+      githubUrl: "https://github.com/meetpatel/tableau-analysis",
+      showLiveDemo: false
+    },
+    {
+      id: "web-scraping-unicorns",
+      title: "Web Scraping & Data Storage of Unicorn Companies",
+      period: "Apr 2023 - May 2023",
+      description: "Developed a Python-based data scraping and storage pipeline focused on extracting and persisting real-time data about unicorn companies (privately held startups valued at over $1B).",
+      technologies: ["Python", "BeautifulSoup", "SQLite", "requests", "ETL", "Web Scraping"],
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=250&fit=crop",
+      metrics: "1M+ Data Points",
+      liveUrl: "#",
+      githubUrl: "https://github.com/meetpatel/unicorn-scraper",
+      showLiveDemo: false
+    },
+    {
+      id: "sales-analysis-tableau",
+      title: "Tableau Sales Analysis Dashboard",
+      period: "Oct 2022 - Dec 2022",
+      description: "Designed and developed a dynamic Sales Analysis Dashboard in Tableau, leveraging real-world transactional and customer demographic data to enhance data-driven decision-making.",
+      technologies: ["Tableau", "Excel", "Data Blending", "Sales Analytics", "KPIs"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      metrics: "12% Revenue Growth",
+      liveUrl: "https://public.tableau.com/app/profile/meet.patel/viz/SalesAnalysisDashboard",
+      githubUrl: "https://github.com/meetpatel/tableau-sales-analysis",
+      showLiveDemo: true
     }
   ];
 
@@ -116,22 +145,24 @@ const Projects = () => {
                   <Button 
                     asChild 
                     size="sm" 
-                    className="bg-primary hover:bg-primary/90 flex-1 hover-scale"
+                    className={`bg-primary hover:bg-primary/90 hover-scale ${project.showLiveDemo ? 'flex-1' : 'w-full'}`}
                   >
                     <Link to={`/project/${project.id}`}>
                       View Details
                     </Link>
                   </Button>
-                  <Button 
-                    asChild
-                    size="sm" 
-                    variant="outline" 
-                    className="flex-1 hover-scale"
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      Live Demo
-                    </a>
-                  </Button>
+                  {project.showLiveDemo && (
+                    <Button 
+                      asChild
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1 hover-scale"
+                    >
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </Card>

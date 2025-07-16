@@ -113,10 +113,19 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  /* Hide default cursor on desktop */
+  /* Hide default cursor on desktop for non-interactive elements */
   @media (min-width: 768px) {
-    * {
+    *:not(button):not(a):not(input):not(textarea):not(select):not([role="button"]):not([data-interactive]) {
       cursor: none !important;
+    }
+    
+    /* Ensure interactive elements show proper cursor */
+    button, a, input, textarea, select, [role="button"], [data-interactive] {
+      cursor: pointer !important;
+    }
+    
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+      cursor: text !important;
     }
   }
 
