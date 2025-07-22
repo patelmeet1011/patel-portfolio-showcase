@@ -81,23 +81,30 @@ const ModernHero = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-5xl lg:text-7xl font-display font-semibold text-foreground leading-tight"
+                className="text-5xl lg:text-7xl font-heading font-bold text-foreground leading-tight"
               >
-                Hello, I'm a{' '}
-                <span className="text-primary">Data</span>{' '}
-                Analyst.
+                Hello, I'm{' '}
+                <span className="text-primary">Meet Patel</span>
               </motion.h1>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="text-2xl lg:text-3xl font-medium text-accent"
+              >
+                Data Analyst • Business Intelligence • Cloud Specialist
+              </motion.div>
             </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
               className="text-lg text-muted-foreground leading-relaxed max-w-lg"
             >
-              I'm a passionate data analyst with 2+ years of experience transforming 
-              complex datasets into actionable insights. Specialized in business intelligence, 
-              cloud technologies, and data visualization.
+              A Data Analyst with 2+ years of experience transforming complex data into actionable insights 
+              and driving business growth. Based in Boston, MA. Actively seeking full-time opportunities.
             </motion.p>
 
             <motion.div

@@ -97,8 +97,8 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gradient-to-br from-background via-muted/30 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Recent <span className="gradient-text">Projects</span>
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
+            Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my expertise in data analytics, 

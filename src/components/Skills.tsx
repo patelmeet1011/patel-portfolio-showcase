@@ -6,23 +6,23 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming & Languages",
-      skills: ["Python", "R", "SQL", "Java", "Ruby", "HTML/CSS", "Unix/Linux"],
-      color: "from-blue-500 to-purple-600"
+      skills: ["Python", "R", "SQL", "Java", "JavaScript", "HTML/CSS", "Unix/Linux"],
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Data Analysis & Visualization",
-      skills: ["Tableau", "Power BI", "Microsoft Excel", "Plotly", "Streamlit", "EDA", "Dashboard Design"],
-      color: "from-green-500 to-blue-500"
+      title: "Data Analysis & Visualization", 
+      skills: ["Tableau", "Power BI", "Excel (PivotTables, VBA)", "Google Analytics", "ETL", "Data Warehousing", "Data Modeling", "Statistical Modeling"],
+      color: "from-green-500 to-teal-500"
     },
     {
-      title: "Databases & Cloud",
-      skills: ["SQL Server", "BigQuery", "Redshift", "AWS", "Azure", "Google Cloud", "SSMS"],
+      title: "Cloud & DevOps",
+      skills: ["AWS (Redshift, Glue)", "Azure (Synapse, Databricks)", "GCP", "Apache Airflow"],
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Analytics & Tools",
-      skills: ["Predictive Modeling", "A/B Testing", "Customer Segmentation", "Apache Airflow", "AWS Glue", "Google Analytics"],
-      color: "from-purple-500 to-pink-500"
+      title: "Business & Process",
+      skills: ["Agile Methodologies", "Jira", "Confluence", "CRM/ERP", "Business Process Analysis", "KPI Monitoring"],
+      color: "from-purple-500 to-indigo-500"
     },
     {
       title: "Compliance & Security",
@@ -31,7 +31,7 @@ const Skills = () => {
     },
     {
       title: "Business Intelligence",
-      skills: ["ETL Development", "Data Warehousing", "Oracle NetSuite", "Dynamics 365", "VMware"],
+      skills: ["ETL Development", "Data Warehousing", "Predictive Modeling", "A/B Testing", "Customer Segmentation"],
       color: "from-indigo-500 to-purple-500"
     }
   ];
@@ -40,8 +40,8 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            My Awesome <span className="gradient-text">Skills</span>
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
+            Technical <span className="text-primary">Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             I have extensive experience across multiple domains of IT and data analytics, 

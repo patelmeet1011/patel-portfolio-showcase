@@ -11,6 +11,7 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import Achievements from '@/components/Achievements';
 import Education from '@/components/Education';
+import CourseWork from '@/components/CourseWork';
 import AnimatedSection from '@/components/AnimatedSection';
 import CursorEffect from '@/components/CursorEffect';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
@@ -34,6 +35,9 @@ const Index = () => {
       </AnimatedSection>
       <AnimatedSection>
         <Education />
+      </AnimatedSection>
+      <AnimatedSection>
+        <CourseWork />
       </AnimatedSection>
       <AnimatedSection>
         <Achievements />

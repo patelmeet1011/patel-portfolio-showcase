@@ -41,8 +41,8 @@ const Experience = () => {
     <section id="experience" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Professional <span className="gradient-text">Experience</span>
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
+            Professional <span className="text-primary">Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             My journey in the IT and data analytics field, showcasing growth and 
