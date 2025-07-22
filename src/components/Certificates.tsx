@@ -369,30 +369,13 @@ const Certificates = () => {
                 </div>
               </div>
 
-              {/* Certificate Actions */}
-              <div className="p-4">
-                <Button 
-                  asChild
-                  className="w-full bg-primary hover:bg-primary/90 group/btn"
-                >
-                  <a
-                    href={cert.certificateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
-                    <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    View Certificate
-                  </a>
-                </Button>
-              </div>
             </Card>
           ))}
         </div>
 
         {/* Certificate Summary Stats */}
         <div className="mt-16 bg-card border border-border/50 rounded-2xl p-8 animate-fade-in glass-effect">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-8">
             <div className="space-y-2">
               <div className="text-3xl font-bold text-primary">{certificates.length}</div>
               <div className="text-muted-foreground text-sm">Total Certificates</div>
@@ -409,6 +392,24 @@ const Certificates = () => {
               <div className="text-3xl font-bold text-primary">100%</div>
               <div className="text-muted-foreground text-sm">Completion Rate</div>
             </div>
+          </div>
+          
+          <div className="text-center">
+            <Button 
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 group/btn"
+            >
+              <a
+                href="https://www.linkedin.com/in/meet-patel-7581b31b9/details/certifications/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                <ExternalLink className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                View All Certifications on LinkedIn
+              </a>
+            </Button>
           </div>
         </div>
       </div>
