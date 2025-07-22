@@ -1,10 +1,9 @@
-
 import React from 'react';
 import EnhancedHeader from '@/components/EnhancedHeader';
-import EnhancedHero from '@/components/EnhancedHero';
-import ModernAbout from '@/components/ModernAbout';
-import Skills from '@/components/Skills';
-import Projects from '@/components/Projects';
+import MasterfulHero from '@/components/MasterfulHero';
+import MasterfulAbout from '@/components/MasterfulAbout';
+import MasterfulSkills from '@/components/MasterfulSkills';
+import MasterfulProjects from '@/components/MasterfulProjects';
 import Experience from '@/components/Experience';
 import Certificates from '@/components/Certificates';
 import Contact from '@/components/Contact';
@@ -24,14 +23,10 @@ const Index = () => {
     <div className="min-h-screen font-sans">
       <CursorEffect />
       <EnhancedHeader />
-      <EnhancedHero />
-      <ModernAbout />
-      <AnimatedSection>
-        <Skills />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Projects />
-      </AnimatedSection>
+      <MasterfulHero />
+      <MasterfulAbout />
+      <MasterfulSkills />
+      <MasterfulProjects />
       <AnimatedSection>
         <Experience />
       </AnimatedSection>
