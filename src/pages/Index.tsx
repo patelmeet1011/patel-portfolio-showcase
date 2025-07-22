@@ -1,5 +1,6 @@
 
 import React from 'react';
+import EnhancedHeader from '@/components/EnhancedHeader';
 import ModernHero from '@/components/ModernHero';
 import ModernAbout from '@/components/ModernAbout';
 import Skills from '@/components/Skills';
@@ -22,6 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen font-sans">
       <CursorEffect />
+      <EnhancedHeader />
       <ModernHero />
       <ModernAbout />
       <AnimatedSection>
