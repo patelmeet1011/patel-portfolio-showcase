@@ -13,7 +13,7 @@ import {
   Cloud,
   BarChart
 } from 'lucide-react';
-import meetProfileImage from '@/assets/meet-patel-profile.png';
+const meetProfileImage = '/lovable-uploads/3ba80543-d670-4d85-829e-0db6a15a6b85.png';
 
 const MasterfulHero = () => {
   const [currentRole, setCurrentRole] = useState(0);
