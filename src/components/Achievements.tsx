@@ -16,7 +16,7 @@ const Achievements = () => {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById('achievements-section');
+    const element = document.getElementById('achievements');
     if (element) {
       observer.observe(element);
     }
@@ -79,7 +79,7 @@ const Achievements = () => {
     { number: "3.59", suffix: "/4.0", label: "Academic GPA", delay: "0s" },
     { number: "25", suffix: "%", label: "ROI Improvement", delay: "0.2s" },
     { number: "60", suffix: "%", label: "Processing Faster", delay: "0.4s" },
-    { number: "100", suffix: "+", label: "Projects Delivered", delay: "0.6s" }
+    { number: "50", suffix: "+", label: "Projects Delivered", delay: "0.6s" }
   ];
 
   const CountUp = ({ number, suffix, label, delay }: any) => {
@@ -120,7 +120,7 @@ const Achievements = () => {
   };
 
   return (
-    <section id="achievements-section" className="py-20 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
+    <section id="achievements" className="py-20 bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden scroll-mt-24">
       {/* Background grid */}
       <div className="absolute inset-0 bg-grid opacity-30"></div>
       

@@ -103,7 +103,7 @@ const MasterfulEducation = () => {
   };
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="education" className="py-32 scroll-mt-24 relative overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-white to-blue-50/40"></div>
       <div className="absolute inset-0">

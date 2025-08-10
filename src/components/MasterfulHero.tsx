@@ -51,9 +51,10 @@ const MasterfulHero = () => {
   };
 
   return (
-    <motion.section 
+    <motion.section
+      id="home"
       style={{ opacity, scale }}
-      className="min-h-screen relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/30"
+      className="min-h-screen scroll-mt-24 relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/30"
     >
       {/* Ambient background elements */}
       <div className="absolute inset-0 overflow-hidden">

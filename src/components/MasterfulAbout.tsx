@@ -35,7 +35,7 @@ const MasterfulAbout = () => {
     },
     { 
       icon: Award, 
-      number: "29+", 
+      number: "7+", 
       label: "Certifications",
       description: "Industry credentials",
       color: "text-emerald-600"
@@ -49,7 +49,7 @@ const MasterfulAbout = () => {
     },
     { 
       icon: Brain, 
-      number: "3.6", 
+      number: "3.59", 
       label: "GPA",
       description: "Magna Cum Laude",
       color: "text-orange-600"

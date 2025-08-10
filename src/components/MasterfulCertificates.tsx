@@ -128,7 +128,7 @@ const MasterfulCertificates = () => {
   };
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="certificates" className="py-32 scroll-mt-24 relative overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50/30"></div>
       <div className="absolute inset-0">
