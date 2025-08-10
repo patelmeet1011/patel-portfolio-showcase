@@ -13,7 +13,7 @@ import {
   Cloud,
   BarChart
 } from 'lucide-react';
-const meetProfileImage = '/lovable-uploads/3ba80543-d670-4d85-829e-0db6a15a6b85.png';
+const meetProfileImage = '/lovable-uploads/b6cb5aac-ad8d-48d8-b094-d6115624122e.png';
 
 const MasterfulHero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -46,7 +46,12 @@ const MasterfulHero = () => {
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      const lenis = (window as any).__lenis;
+      if (lenis?.scrollTo) {
+        lenis.scrollTo(aboutSection, { offset: -80 });
+      } else {
+        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -107,19 +112,6 @@ const MasterfulHero = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
               {/* Status Badge */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                <Badge 
-                  variant="outline" 
-                  className="border-primary/30 text-primary bg-primary/5 px-6 py-3 text-sm font-medium elegant-border"
-                >
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  Available for opportunities
-                </Badge>
-              </motion.div>
 
               {/* Main Heading */}
               <div className="space-y-6">
@@ -313,7 +305,9 @@ const MasterfulHero = () => {
                 >
                   <motion.img
                     src={meetProfileImage}
-                    alt="Meet Patel"
+                    alt="Meet Patel professional headshot"
+                    loading="eager"
+                    decoding="async"
                     className="w-full h-full object-cover"
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}

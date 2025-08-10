@@ -6,8 +6,14 @@ const CursorEffect = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    const frame = { id: 0 as number | null };
     const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      if (frame.id) return;
+      const { clientX, clientY } = e;
+      frame.id = requestAnimationFrame(() => {
+        setMousePosition({ x: clientX, y: clientY });
+        frame.id = null;
+      });
     };
 
     const handleMouseEnter = () => setIsHovering(true);
@@ -36,10 +42,10 @@ const CursorEffect = () => {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="fixed w-2 h-2 bg-primary rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed w-2 h-2 bg-primary rounded-full pointer-events-none z-50 mix-blend-difference will-change-transform"
         style={{
-          left: mousePosition.x - 4,
-          top: mousePosition.y - 4,
+          x: mousePosition.x - 4,
+          y: mousePosition.y - 4,
         }}
         animate={{
           scale: isHovering ? 0.5 : 1,
@@ -53,10 +59,10 @@ const CursorEffect = () => {
       
       {/* Cursor ring */}
       <motion.div
-        className="fixed w-8 h-8 border-2 border-primary/50 rounded-full pointer-events-none z-50 mix-blend-difference"
+        className="fixed w-8 h-8 border-2 border-primary/50 rounded-full pointer-events-none z-50 mix-blend-difference will-change-transform"
         style={{
-          left: mousePosition.x - 16,
-          top: mousePosition.y - 16,
+          x: mousePosition.x - 16,
+          y: mousePosition.y - 16,
         }}
         animate={{
           scale: isHovering ? 1.5 : 1,

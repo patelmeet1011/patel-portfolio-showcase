@@ -29,8 +29,13 @@ const EnhancedHeader = () => {
   const handleNavClick = (href: string) => {
     if (href.startsWith('#')) {
       const element = document.querySelector(href);
+      const lenis = (window as any).__lenis;
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        if (lenis?.scrollTo) {
+          lenis.scrollTo(element, { offset: -80 });
+        } else {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     }
     setIsMenuOpen(false);
